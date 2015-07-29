@@ -64,3 +64,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   };
 
 })(document);
+
+function openPage(url) {
+  window.open(url);
+}
