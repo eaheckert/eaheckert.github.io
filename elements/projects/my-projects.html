@@ -1,0 +1,131 @@
+<dom-module id="my-projects">
+
+<style is="custom-style">
+
+  paper-material {
+    border-radius: 2px;
+    height: 100%;
+    padding: 16px 0 16px 0;
+    width: calc(98.66% - 16px);
+    margin: 16px auto;
+    background: white;
+  }
+
+  .text-title {
+  	font-size: 2.5em;
+  	font-weight: 300;
+  }
+
+  .text-points {
+  	font-weight: bold;
+    font-size: 1.1em;
+  }
+
+  .text-section {
+  	font-size: 2.5em;
+  	font-weight: 300;
+    color: var(--accent-color);
+  }
+
+  .text-description {
+  	word-wrap: break-word;
+  	font-size: 1.3em;
+  	font-weight: 300;
+  	color: #111;
+  }
+
+  .align-right {
+    position: absolute;
+    right: 0px;
+    padding: 10px;
+  }
+
+  .align-left {
+    float: left;
+  }
+
+  .fit-width {
+      max-width: 100%;
+    }
+
+  .link-button {
+  	text-decorations: none;
+    color: inherit;
+  }
+
+  .icon-and-title-flex {
+  	display: -ms-flexbox;
+  	display: -webkit-flex;
+  	display: flex;
+  	align-items: center;
+  	flex-wrap: wrap
+  }
+
+  .appicon {
+  	width: 200px;
+  	height: 200px;
+  }
+
+  .circular-icon {
+  	width: 200px;
+  	height: auto;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+  	-moz-border-radius: 100px;
+  }
+
+  .title-container {
+  	margin-left: 2em;
+  }
+
+  /* Height of the scroll area */
+  .content {
+    height: 900px;
+  }
+</style>
+
+  <template>
+      <template is="dom-repeat" items="{{projects}}">
+        <paper-material elevation="0" class="paper-font-body1">
+          <div class="icon-and-title-flex">
+            <div class="title-container">
+              <span class="text-title">Eugene "Dwarf" Heckert</span>
+              <br><div class="intertext-padding"></div>
+              <span class="text-points">Developer • Father • Husband • Gaming Enthusiast</span>
+              <br>
+            </div>
+          </div><br><br>
+          <p>While I have Bachelor degree in Game and Simulation Programming all my mobile experience is self taught.
+            I enjoy working on complex projects because I love solving problems.
+            While I have started programming to make games I have found that apps offer their own challenges that make them just as fun to work on.
+          I am also a proud father of a beautiful daughter and married to a wonderful and supportive wife.</p>
+          <p></p>
+        </paper-material>
+      </template>
+  </template>
+
+  <script>
+    (function () {
+      Polymer({
+        is: 'my-projects',
+        properties: {
+          projects: {
+            type: Array,
+            notify: true,
+          }
+        },
+        ready: function() {
+          this.projects = [
+            'Responsive Web App boilerplate',
+            'Iron Elements and Paper Elements',
+            'End-to-end Build Tooling (including Vulcanize)',
+            'Unit testing with Web Component Tester',
+            'Routing with Page.js',
+            'Offline support with the Platinum Service Worker Elements'
+          ];
+        }
+      });
+    })();
+  </script>
+
+</dom-module>

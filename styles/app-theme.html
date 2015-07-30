@@ -131,6 +131,83 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     -webkit-transform-origin: left center;
     transform-origin: left center;
   }
+  paper-button[raised].colored {
+      background: var(--default-primary-color);
+      color: #fff;
+  }
+
+  body {
+    background: #fafafa;
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333;
+  }
+
+  .text-title {
+  	font-size: 2.5em;
+  	font-weight: 300;
+  }
+
+  .text-points {
+  	font-weight: bold;
+    font-size: 1.1em;
+  }
+
+  .text-section {
+  	font-size: 2.5em;
+  	font-weight: 300;
+    color: var(--accent-color);
+  }
+
+  .text-description {
+  	word-wrap: break-word;
+  	font-size: 1.3em;
+  	font-weight: 300;
+  	color: #111;
+  }
+
+  .align-right {
+    position: absolute;
+    right: 0px;
+    padding: 10px;
+  }
+
+  .align-left {
+    float: left;
+  }
+
+  .fit-width {
+      max-width: 100%;
+    }
+
+  .link-button {
+  	text-decorations: none;
+    color: inherit;
+  }
+
+  .icon-and-title-flex {
+  	display: -ms-flexbox;
+  	display: -webkit-flex;
+  	display: flex;
+  	align-items: center;
+  	flex-wrap: wrap
+  }
+
+  .appicon {
+  	width: 200px;
+  	height: 200px;
+  }
+
+  .circular-icon {
+  	width: 200px;
+  	height: auto;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+  	-moz-border-radius: 100px;
+  }
+
+  .title-container {
+  	margin-left: 2em;
+  }
 
   /* Height of the scroll area */
   .content {

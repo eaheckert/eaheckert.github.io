@@ -31,16 +31,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <!-- Add to homescreen for Chrome on Android -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="application-name" content="Eugene Heckert">
-  <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+  <link rel="icon" sizes="192x192" href="images/touch/avatar_192x192.png">
 
   <!-- Add to homescreen for Safari on iOS -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="Eugene Heckert">
-  <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+  <link rel="avatar_152x152" href="images/touch/avatar_152x152.png">
 
   <!-- Tile icon for Win8 (144x144) -->
-  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileImage" content="images/touch/avatar144x144.png">
 
   <!-- build:css styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
@@ -69,20 +69,21 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         </paper-toolbar>
 
         <!-- Drawer Content -->
-        <paper-menu class="list" attr-for-selected="data-route" selected="[[route]]">
-          <a data-route="home" href="/" on-click="onDataRouteClick">
+        <paper-menu class="list" attr-for-selected="data-route" selected="[[route]]" on-iron-select="onMenuSelect">
+
+          <a data-route="me" href="/">
             <iron-icon icon="face"></iron-icon>
-            <span>Home</span>
+            <span>Me</span>
           </a>
 
-          <!--<a data-route="users" href="/users" on-click="onDataRouteClick">
+          <!--<a data-route="projects" href="/projects">
             <iron-icon icon="dashboard"></iron-icon>
-            <span>Users</span>
-          </a>
+            <span>Projects</span>
+          </a>-->
 
-          <a data-route="contact" href="/contact" on-click="onDataRouteClick">
-            <iron-icon icon="mail"></iron-icon>
-            <span>Contact</span>
+          <!--<a data-route="resume" href="/resume">
+            <iron-icon icon="work"></iron-icon>
+            <span>Resume</span>
           </a>-->
         </paper-menu>
       </paper-scroll-header-panel>
@@ -114,38 +115,44 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <div class="content">
           <iron-pages attr-for-selected="data-route" selected="{{route}}">
 
-            <section data-route="home">
+            <section data-route="me">
 
               <paper-material elevation="0" class="paper-font-body1">
-                <h1 id="About Me">About Me</h1>
-                <p>While I have Bachelor degree in Game and Simulation Programming all my mobile experience is self taught. I enjoy working on complex projects because I love solving problems. While I have started programming to make games I have found that apps offer their own challenges that make them just as fun to work on.</p>
+                <div class="icon-and-title-flex">
+                  <img src="images/profile_avatar.png" class="circular-icon"></img>
+                  <div class="title-container">
+                    <span class="text-title">Eugene "Dwarf" Heckert</span>
+                    <br><div class="intertext-padding"></div>
+                    <span class="text-points">Developer • Father • Husband • Gaming Enthusiast</span>
+                    <br>
+                  </div>
+                </div><br><br>
+                <p>While I have Bachelor degree in Game and Simulation Programming all my mobile experience is self taught.
+                  I enjoy working on complex projects because I love solving problems.
+                  While I have started programming to make games I have found that apps offer their own challenges that make them just as fun to work on.
+                I am also a proud father of a beautiful daughter and married to a wonderful and supportive wife.</p>
                 <p></p>
               </paper-material>
 
             </section>
 
-            <section data-route="users">
-              <paper-material elevation="1">
-                <h2 class="paper-font-display2">Users</h2>
-                <p>This is the users section</p>
-                <a href="/users/Rob">Rob</a>
-              </paper-material>
+            <section data-route="projects">
+
+                <my-projects></my-projects>
+              <!--<paper-material elevation="0" class="paper-font-body1">
+                <h1 id="About Me">Projects</h1>
+                <p>While I have Bachelor degree in Game and Simulation Programming all my mobile experience is self taught. I enjoy working on complex projects because I love solving problems. While I have started programming to make games I have found that apps offer their own challenges that make them just as fun to work on.</p>
+                <p></p>
+              </paper-material>-->
+
             </section>
 
-            <section data-route="user-info">
-              <paper-material elevation="1">
-                <h2 class="paper-font-display2">
-                User:<span>{{params.name}}</span>
-                </h2>
-                <div>This is <span>{{params.name}}</span>'s section</div>
-              </paper-material>
-            </section>
+            <section data-route="resume">
 
-            <section data-route="contact">
-              <paper-material elevation="1">
-                <h2 class="paper-font-display2">Contact</h2>
-                <p>This is the contact section</p>
+              <paper-material elevation="0" class="paper-font-body1">
+
               </paper-material>
+
             </section>
 
           </iron-pages>
