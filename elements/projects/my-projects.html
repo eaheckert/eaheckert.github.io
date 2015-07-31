@@ -85,11 +85,11 @@
 </style>
 
   <template>
-      <template is="dom-repeat" items="{{projects}}">
+      <template is="dom-repeat" items="{{projectsTitles}}">
         <paper-material elevation="0" class="paper-font-body1">
           <div class="icon-and-title-flex">
             <div class="title-container">
-              <span class="text-title">Eugene "Dwarf" Heckert</span>
+              <span class="text-title">{{item}}</span>
               <br><div class="intertext-padding"></div>
               <span class="text-points">Developer • Father • Husband • Gaming Enthusiast</span>
               <br>
@@ -109,13 +109,13 @@
       Polymer({
         is: 'my-projects',
         properties: {
-          projects: {
+          projectsTitles: {
             type: Array,
             notify: true,
           }
         },
         ready: function() {
-          this.projects = [
+          this.projectsTitles = [
             'Responsive Web App boilerplate',
             'Iron Elements and Paper Elements',
             'End-to-end Build Tooling (including Vulcanize)',

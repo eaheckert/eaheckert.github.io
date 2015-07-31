@@ -76,15 +76,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <span>Me</span>
           </a>
 
-          <!--<a data-route="projects" href="/projects">
+          <a data-route="projects" href="/projects">
             <iron-icon icon="dashboard"></iron-icon>
             <span>Projects</span>
-          </a>-->
+          </a>
 
-          <!--<a data-route="resume" href="/resume">
+          <a data-route="resume" href="/resume">
             <iron-icon icon="work"></iron-icon>
             <span>Resume</span>
-          </a>-->
+          </a>
         </paper-menu>
       </paper-scroll-header-panel>
 
@@ -138,20 +138,112 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
             <section data-route="projects">
 
-                <my-projects></my-projects>
-              <!--<paper-material elevation="0" class="paper-font-body1">
-                <h1 id="About Me">Projects</h1>
-                <p>While I have Bachelor degree in Game and Simulation Programming all my mobile experience is self taught. I enjoy working on complex projects because I love solving problems. While I have started programming to make games I have found that apps offer their own challenges that make them just as fun to work on.</p>
+              <h1 class="text-section">Professional</h1>
+
+              <paper-material elevation="0" class="paper-font-body1">
+                <div class="align-right">
+                  <paper-icon-button icon="av:videocam" onclick="openPage('https://youtu.be/d1WcvPPD6MA')"></paper-icon-button>
+                </div>
+                <div class="icon-and-title-flex">
+                  <div class="title-container">
+                    <span class="text-title">GameStop Native App</span>
+                    <br><div class="intertext-padding"></div>
+                    <span class="text-points">Iterative Design • Reveal • CocoaPods</span>
+                    <br>
+                  </div>
+                </div><br><br>
+                <p>We worked side-by-side with designers as we created a completely new app replacing their old Appcelerator that wasn’t getting the results they wanted.
+                   We used an iterative design process to make sure that every feature that went into the the app looked and felt just right.
+                    We worked on adding different features for over a year with periodic release to allow the public to give feedback and even influence some of the features that went into the app.</p>
                 <p></p>
-              </paper-material>-->
+              </paper-material>
+
+                <paper-material elevation="0" class="paper-font-body1">
+                  <div class="align-right">
+                    <paper-icon-button icon="av:games" onclick="openPage('https://youtu.be/d1WcvPPD6MA')"></paper-icon-button>
+                  </div>
+                  <div class="icon-and-title-flex">
+                    <div class="title-container">
+                      <span class="text-title">Chuck E Rocks</span>
+                      <br><div class="intertext-padding"></div>
+                      <span class="text-points">ActionScript • Flash • Web Game</span>
+                      <br>
+                    </div>
+                  </div><br><br>
+                  <p>A flash game that was created in about two months with myself only have a month to learn how to develop using ActionScript and Flash.
+                    The game is a cross between Rock Band and Fruit Ninja.
+                    You swiped the music notes as they move across the screen.
+                    The more notes you get the more tickets you will receive at the end of the game which can be redeemed for real ticket at Chuck-E-Cheese.</p>
+                  <p></p>
+                </paper-material>
+
+                <paper-material elevation="0" class="paper-font-body1">
+                  <div class="align-right">
+                    <paper-icon-button icon="av:videocam" onclick="openPage('https://youtu.be/d1WcvPPD6MA')"></paper-icon-button>
+                  </div>
+                  <div class="icon-and-title-flex">
+                    <div class="title-container">
+                      <span class="text-title">LEGO Ninjago Video Dojo</span>
+                      <br><div class="intertext-padding"></div>
+                      <span class="text-points">JSON • Objective-C • Universal</span>
+                      <br>
+                    </div>
+                  </div><br><br>
+                  <p>This app was designed to allow LEGO curate video content to their users.
+                    The app would pull down a JSON file at launch and would parse the information and display for the user.
+                    The user could select a link and the app would open a webview within the app allowing the user to view the product they watching a video about.</p>
+                  <p></p>
+                </paper-material>
+
+              <h1 class="text-section">Personal</h1>
+
+                <paper-material elevation="0" class="paper-font-body1">
+                  <div class="align-right">
+                    <paper-icon-button src="images/icon_GitHub.png" onclick="openPage('https://github.com/ludomade/Tournament-iOS')"></paper-icon-button>
+                  </div>
+                  <div class="icon-and-title-flex">
+                    <div class="title-container">
+                      <span class="text-title">Tournament</span>
+                      <br><div class="intertext-padding"></div>
+                      <span class="text-points">Parse • Storyboards • Size Classes</span>
+                      <br>
+                    </div>
+                  </div><br><br>
+                  <p>The goal of this project was to make something that could be used at my office.
+                    We were having weekly tournaments and I wanted to simplify the process of letting people know when it is their turn to play.
+                    For this I wanted to use Parse which would not only track the tournament but also allowed for the use of push notification.
+                    I was only able to create a vertical slice of single elimination tournament.</p>
+                  <p></p>
+                </paper-material>
+
+              <h1 class="text-section">Academic</h1>
+
+                <paper-material elevation="0" class="paper-font-body1">
+                  <div class="align-right">
+                    <paper-icon-button icon="av:videocam" onclick="openPage('https://youtu.be/H_8eVqKMoz4')"></paper-icon-button>
+                  </div>
+                  <div class="icon-and-title-flex">
+                    <div class="title-container">
+                      <span class="text-title">War Eternal</span>
+                      <br><!--<div class="intertext-padding"></div>-->
+                      <span class="text-points">Real Time Strategy • Simulation • Artificial Neural Network</span>
+                      <br>
+                    </div>
+                  </div><br><br>
+                  <p>A projected created as a junior project.
+                    The whole simulation was created over the course of about 8 weeks.
+                    The project was created using Visual Studios as the development environment and C++ as the programming language.</p>
+                  <p></p>
+                </paper-material>
 
             </section>
 
             <section data-route="resume">
 
               <paper-material elevation="0" class="paper-font-body1">
-
+                <img class="fit-width"src="resume/resume.png"/>
               </paper-material>
+            <paper-button flat class="primary" onclick="openPage('../resume/EugeneHeckert.pdf')">DOWNLOAD PDF</paper-button>
 
             </section>
 
@@ -159,23 +251,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         </div>
       </paper-scroll-header-panel>
     </paper-drawer-panel>
-
-    <!-- Uncomment next block to enable Service Worker support (1/2) -->
-    <!--
-    <paper-toast id="caching-complete"
-                 duration="6000"
-                 text="Caching complete! This app will work offline.">
-    </paper-toast>
-
-    <platinum-sw-register auto-register
-                          clients-claim
-                          skip-waiting
-                          on-service-worker-installed="displayInstalledToast">
-      <platinum-sw-cache default-cache-strategy="networkFirst"
-                         precache-file="precache.json">
-      </platinum-sw-cache>
-    </platinum-sw-register>
-    -->
 
   </template>
 
